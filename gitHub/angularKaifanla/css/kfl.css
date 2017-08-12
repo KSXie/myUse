@@ -1,0 +1,36 @@
+
+.start{
+    text-align: center;
+    margin-top: 200px;
+}
+.start img{
+    width:70%;
+}
+.start h1{
+    font-size: 100px;
+
+}
+a:hover{
+    text-decoration: none;
+}
+
+
+.navbar-fixed-bottom{
+    text-align: center;
+}
+.navbar-fixed-bottom li{
+    margin-top:15px;
+    float:left;
+    width:33.3%;
+}
+.container{
+    margin-top: 60px;
+}
+.main .form-group{
+    position: relative;
+}
+.main .glyphicon-search{
+   position:absolute;
+    right:10px;
+    top:10px;
+}

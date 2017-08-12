@@ -1,0 +1,48 @@
+<div ng-include="'tpl/include/header.html'"></div>
+<div class="container main">
+    <div class="form-group">
+        <input type="text" ng-change="searchKW()" ng-model="kw" class="form-control"
+               placeholder="搜索菜品名称和原料..." />
+        <span class="glyphicon glyphicon-search"></span>
+    </div>
+    <div class="list-group">
+        <a href="#/details/{{dish.did}}" class="list-group-item" ng-repeat="dish in dishList">
+            <div class="media">
+                <div class="media-left">
+                    <img ng-src="img/{{dish.img_sm}}" alt=""/>
+                </div>
+                <div class="media-body">
+                    <h2 ng-bind="dish.name"></h2>
+                    <p >主要食材： <span ng-bind="dish.material"></span></p>
+                    <hr/>
+                    <span class="text-danger">{{dish.price | currency:"￥"}}</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div ng-show = "searKW">
+        <button ng-show="hasMore" ng-click="loadMore()" class="btn btn-success btn-block">加载更多</button>
+        <p class="alert alert-danger" ng-hide="hasMore">没有更多</p>
+    </div>
+
+
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div ng-include="'tpl/include/footer.html'"></div>
